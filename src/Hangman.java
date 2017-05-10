@@ -40,6 +40,10 @@ public class Hangman {
 				displayWord(wordDisplay);
 				System.out.print("\nGuess a letter: ");
 				guess = scan.nextLine().trim();
+				while (guess.equals("")){
+					System.out.println("Please enter a letter!");
+					guess = scan.nextLine().trim();
+				}
 				
 				boolean match = false;
 				boolean repeat = false;
@@ -57,8 +61,7 @@ public class Hangman {
 					gameActive = false;
 					playerWins = true;
 				}
-				
-				if (repeat) {
+				 if (repeat) {
 					System.out.println("Sorry! You already guessed that letter!");
 				} else if (gameActive && match) {
 					System.out.println("Congrats! You got a letter");
