@@ -14,12 +14,16 @@ public class Hangman {
 		boolean gameActive;
 		boolean playerWins;
 		char[] wordDisplay;
+		//no
 		String guess, newGame;
 		int lives = 5;
 		String[] wordList = {"hello", "coding", "spelling", "hangman", "zenith", "prowess"};
-		
+		//start new game
+		//startProgram
+		//yes or no
 		
 		System.out.print("Hello! Do you want to play a game of Hangman? ");
+		//no
 		newGame = scan.nextLine().trim();
 		
 		while (newGame.equalsIgnoreCase("yes")) {
@@ -35,11 +39,12 @@ public class Hangman {
 			}
 			
 			//string.toCharArray();
-			
+			//method displaty word
 			while(gameActive == true) {
 				displayWord(wordDisplay);
 				System.out.print("\nGuess a letter: ");
 				guess = scan.nextLine().trim();
+				//delete later
 				while (guess.equals("")){
 					System.out.println("Please enter a letter!");
 					guess = scan.nextLine().trim();
