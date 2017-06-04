@@ -46,12 +46,25 @@ public class Hangman_UI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		txtWordguessed = new JTextField();
+		txtWordguessed.setHorizontalAlignment(SwingConstants.CENTER);
+		txtWordguessed.setBounds(65, 207, 462, 25);
+		contentPane.add(txtWordguessed);
+		txtWordguessed.setColumns(10);
+		
+		JLabel lblLives = new JLabel("Lives: ");
+		lblLives.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblLives.setBounds(15, 15, 56, 16);
+		contentPane.add(lblLives);
+		
 		JButton btnA = new JButton("A");
 		btnA.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		btnA.setBounds(65, 245, 42, 25);
 		btnA.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				game.guessLetter('A');
+				game.guessLetter('a');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnA);
@@ -61,7 +74,9 @@ public class Hangman_UI extends JFrame {
 		btnB.setBounds(118, 245, 41, 25);
 		btnB.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				game.guessLetter('B');
+				game.guessLetter('b');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnB);
@@ -71,7 +86,9 @@ public class Hangman_UI extends JFrame {
 		btnC.setBounds(171, 245, 41, 25);
 		btnC.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('C');
+				game.guessLetter('c');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnC);
@@ -81,7 +98,9 @@ public class Hangman_UI extends JFrame {
 		btnD.setBounds(224, 245, 41, 25);
 		btnD.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('D');
+				game.guessLetter('d');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnD);
@@ -91,7 +110,9 @@ public class Hangman_UI extends JFrame {
 		btnE.setBounds(275, 245, 41, 25);
 		btnE.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('E');
+				game.guessLetter('e');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnE);
@@ -101,7 +122,9 @@ public class Hangman_UI extends JFrame {
 		btnF.setBounds(329, 245, 41, 25);
 		btnF.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('F');
+				game.guessLetter('f');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnF);
@@ -111,7 +134,9 @@ public class Hangman_UI extends JFrame {
 		btnG.setBounds(382, 245, 41, 25);
 		btnG.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('G');
+				game.guessLetter('g');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnG);
@@ -121,7 +146,9 @@ public class Hangman_UI extends JFrame {
 		btnH.setBounds(435, 245, 41, 25);
 		btnH.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('H');
+				game.guessLetter('h');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnH);
@@ -131,7 +158,9 @@ public class Hangman_UI extends JFrame {
 		btnI.setBounds(487, 245, 41, 25);
 		btnI.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('I');
+				game.guessLetter('i');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnI);
@@ -141,7 +170,9 @@ public class Hangman_UI extends JFrame {
 		btnJ.setBounds(89, 283, 41, 25);
 		btnJ.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('J');
+				game.guessLetter('j');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnJ);
@@ -151,7 +182,9 @@ public class Hangman_UI extends JFrame {
 		btnK.setBounds(142, 283, 41, 25);
 		btnK.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('K');
+				game.guessLetter('k');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnK);
@@ -161,7 +194,9 @@ public class Hangman_UI extends JFrame {
 		btnL.setBounds(195, 283, 41, 25);
 		btnL.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('L');
+				game.guessLetter('l');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnL);
@@ -171,7 +206,9 @@ public class Hangman_UI extends JFrame {
 		btnM.setBounds(248, 283, 41, 26);
 		btnM.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('M');
+				game.guessLetter('m');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnM);
@@ -181,7 +218,9 @@ public class Hangman_UI extends JFrame {
 		btnN.setBounds(301, 283, 41, 25);
 		btnN.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('N');
+				game.guessLetter('n');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnN);
@@ -191,7 +230,9 @@ public class Hangman_UI extends JFrame {
 		btnO.setBounds(354, 283, 41, 26);
 		btnO.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('O');
+				game.guessLetter('o');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnO);
@@ -201,7 +242,9 @@ public class Hangman_UI extends JFrame {
 		btnP.setBounds(407, 283, 41, 25);
 		btnP.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('P');
+				game.guessLetter('p');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnP);
@@ -211,7 +254,9 @@ public class Hangman_UI extends JFrame {
 		btnQ.setBounds(460, 283, 41, 26);
 		btnQ.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('Q');
+				game.guessLetter('q');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnQ);
@@ -221,7 +266,9 @@ public class Hangman_UI extends JFrame {
 		btnR.setBounds(65, 321, 41, 25);
 		btnR.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('R');
+				game.guessLetter('r');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnR);
@@ -231,7 +278,9 @@ public class Hangman_UI extends JFrame {
 		btnS.setBounds(118, 321, 41, 25);
 		btnS.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('S');
+				game.guessLetter('s');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnS);
@@ -241,7 +290,9 @@ public class Hangman_UI extends JFrame {
 		btnT.setBounds(171, 321, 41, 25);
 		btnT.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('T');
+				game.guessLetter('t');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnT);
@@ -251,7 +302,9 @@ public class Hangman_UI extends JFrame {
 		btnU.setBounds(222, 321, 41, 25);
 		btnU.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('U');
+				game.guessLetter('u');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnU);
@@ -261,7 +314,9 @@ public class Hangman_UI extends JFrame {
 		btnV.setBounds(275, 321, 41, 25);
 		btnV.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('V');
+				game.guessLetter('v');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnV);
@@ -271,7 +326,9 @@ public class Hangman_UI extends JFrame {
 		btnW.setBounds(328, 321, 42, 27);
 		btnW.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('W');
+				game.guessLetter('w');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnW);
@@ -281,7 +338,9 @@ public class Hangman_UI extends JFrame {
 		btnX.setBounds(381, 321, 41, 25);
 		btnX.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('X');
+				game.guessLetter('x');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnX);
@@ -291,7 +350,9 @@ public class Hangman_UI extends JFrame {
 		btnY.setBounds(434, 321, 41, 25);
 		btnY.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('Y');
+				game.guessLetter('y');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnY);
@@ -301,32 +362,22 @@ public class Hangman_UI extends JFrame {
 		btnZ.setBounds(487, 321, 41, 25);
 		btnZ.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game.guessLetter('Z');
+				game.guessLetter('z');
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnZ);
-
-		txtWordguessed = new JTextField();
-		txtWordguessed.setHorizontalAlignment(SwingConstants.CENTER);
-		txtWordguessed.setText(game.displayedWord());
-		txtWordguessed.setBounds(65, 207, 462, 25);
-		contentPane.add(txtWordguessed);
-		txtWordguessed.setColumns(10);
 		
 		JButton btnStartNewGame = new JButton("Start New Game?");
 		btnStartNewGame.setBounds(213, 355, 161, 25);
 		btnStartNewGame.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				game.startNewGame();
+				txtWordguessed.setText(game.displayedWord());
+				lblLives.setText("Lives: " + game.lives());
 			}
 		});
 		contentPane.add(btnStartNewGame);
-		
-		JLabel lblLives = new JLabel("Lives: " + game.lives());
-		lblLives.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblLives.setBounds(15, 15, 56, 16);
-		contentPane.add(lblLives);
-		
-		
 	}
 }

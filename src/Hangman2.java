@@ -34,7 +34,7 @@ public class Hangman2 {
 		return lives;
 	}
 	public String displayedWord(){
-		return new String (displayedWord);
+		return String.valueOf(displayedWord);
 	}
 	
 	public String guessLetter(char letter){
